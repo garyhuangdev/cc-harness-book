@@ -161,8 +161,12 @@ const enSidebar = [
 
 export default withMermaid(
   defineConfig({
+    mermaid: {
+      suppressErrorRendering: true
+    },
+    base: '/cc-harness-book/',
     title: 'AI Harness Architecture',
-    description: 'Deep Dive into AI Agent Framework Design through Claude Code Source Analysis',
+    description: 'Deep Dive into AI Agent Framework Design through CC Source Analysis',
     lastUpdated: true,
     srcExclude: ['_research/**'],
     markdown: {
@@ -173,7 +177,7 @@ export default withMermaid(
       }
     },
     head: [
-      ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]
+      ['link', { rel: 'icon', type: 'image/svg+xml', href: '/cc-harness-book/favicon.svg' }]
     ],
     locales: {
       en: {
@@ -190,7 +194,7 @@ export default withMermaid(
           docFooter: { prev: 'Previous', next: 'Next' },
           lastUpdated: { text: 'Last updated' },
           footer: {
-            message: 'Based on Claude Code Source Analysis',
+            message: 'Based on CC Source Analysis',
             copyright: 'AI Harness Architecture Deep Dive'
           }
         }
@@ -209,7 +213,7 @@ export default withMermaid(
           docFooter: { prev: '上一章', next: '下一章' },
           lastUpdated: { text: '最后更新于' },
           footer: {
-            message: '基于 Claude Code 源码分析',
+            message: '基于 CC 源码分析',
             copyright: 'AI Harness Architecture Deep Dive'
           }
         }
@@ -220,7 +224,7 @@ export default withMermaid(
         provider: 'local'
       },
       socialLinks: [
-        { icon: 'github', link: 'https://github.com' }
+        { icon: 'github', link: 'https://github.com/garyhuangdev/cc-harness-book' }
       ]
     }
   })
